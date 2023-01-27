@@ -64,7 +64,7 @@ textarea {
 
 .heading-primary {
   font-size: 6rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 3px;
   text-align: center; }
   @media only screen and (max-width: 37.5em) {
@@ -86,7 +86,7 @@ textarea {
 .heading-sec__main {
   display: block;
   font-size: 4rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
   letter-spacing: 3px;
   text-align: center;
@@ -128,7 +128,7 @@ textarea {
 
 .heading-sm {
   font-size: 2.2rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px; }
 
 .main-container {
@@ -139,7 +139,7 @@ textarea {
 .btn {
   background: #fff;
   color: #333;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
@@ -536,7 +536,7 @@ textarea {
     display: block; }
   .header__logo-sub {
     font-size: 1.8rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 1px; }
   .header__links {
@@ -549,7 +549,7 @@ textarea {
     display: inline-block;
     font-size: 1.6rem;
     color: #333;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 700;
     transition: color .3s; }
@@ -597,7 +597,7 @@ textarea {
     text-align: right;
     border-bottom: 1px solid #eee;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
     transition: color .3s; }
     .header__sm-menu-link a:hover {
