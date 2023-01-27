@@ -21,11 +21,17 @@
       <div class="header__content">
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
+            <img src="./assets/png/me.png" class="header__logo-img" alt="Yo presente!" width="100px" height="100px" style="border-radius: 50%; text-align: center;">
           </div>
           <span class="header__logo-sub">💎 ImcodingLive 🇨🇱</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="#" class="header__link">
+                <div class="elfsight-app-d69b3030-93b8-4b9b-83f1-968e5060a8f1"></div>
+              </a>
+            </li>
             <li class="header__link-wrapper">
               <a href="./index.html" class="header__link"> Home </a>
             </li>
@@ -33,9 +39,6 @@
               <a href="./index.html#projects" class="header__link">
                 Projects
               </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
             </li>
           </ul>
           <div class="header__main-ham-menu-cont">
@@ -61,17 +64,12 @@
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
           </ul>
         </div>
       </div>
     </header>
     <section class="home-hero">
       <div class="home-hero__content">
-        <img src="./assets/png/me.png" alt="Yo presente!" width="100px" height="100px" style="border-radius: 50%; text-align: center;">
         <h1 class="heading-primary">Hi👋! my name is Pablo Blanco 😄</h1>
         <div class="home-hero__info">
           <p class="text-primary">
@@ -147,6 +145,7 @@
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
+                style="border-radius: 50%; width: 350px; height: 350px;"
               />
             </div>
             <div class="projects__row-content">
@@ -170,6 +169,7 @@
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
+                style="border-radius: 50%; width: 350px; height: 350px;"
               />
             </div>
             <div class="projects__row-content">
@@ -193,6 +193,7 @@
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
+                style="border-radius: 50%; width: 350px; height: 350px;"
               />
             </div>
             <div class="projects__row-content">
@@ -210,6 +211,7 @@
                 >View More</a
               >
             </div>
+          </div>
             <div class="projects__row">
               <div class="projects__row-img-cont">
                 <img
@@ -217,6 +219,7 @@
                   alt="Software Screenshot"
                   class="projects__row-img"
                   loading="lazy"
+                  style="border-radius: 50%; width: 350px; height: 350px;"
                 />
               </div>
             <div class="projects__row-content">
@@ -230,7 +233,7 @@
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
                 >View More</a
-              >
+                >
             </div>
           </div>
           <div class="projects__row">
@@ -240,6 +243,7 @@
                 alt="Software Screenshot"
                 class="projects__row-img"
                 loading="lazy"
+                style="border-radius: 50%; width: 350px; height: 350px;"
               />
             </div>
             <div class="projects__row-content">
@@ -247,64 +251,19 @@
               <p class="projects__row-content-desc">
                 Successfully completed Preu Gauss project order for other Freelance person from devChile
                 in Ruby on Rails 5 using Docker container.
-                Not available as Freelance order.
               </p>
+              <a
+              href="./index.html"
+              class="btn btn--med btn--theme dynamicBgClr"
+              >No available 🔒</a
+            >
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact Me</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            If you want something like software, talk with me, fell free to contact me!
-          </span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Your Name</label>
-              <input
-                required
-                placeholder="Your name here"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Your email here"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Your message..."
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Send 😄
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
+    
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -359,5 +318,6 @@
     </footer>
 
     <script src="./index.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
   </body>
 </html>
