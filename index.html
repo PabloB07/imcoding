@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,16 +7,56 @@
     <title>ImcodingLive</title>
     <meta name="description" content="Personal portfolio" />
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Flaticon CDN -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    
+    <!-- AOS Library para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Typed.js para efectos de texto -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Tu CSS personalizado -->
     <link rel="stylesheet" href="css/style.css" />
-
+    
+    <script>
+      // Configuración de Tailwind con los colores de Discord
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              discord: {
+                'primary': '#5865F2',
+                'secondary': '#99AAB5',
+                'dark': '#36393F',
+                'darker': '#2F3136',
+                'light': '#FFFFFF'
+              }
+            },
+            backgroundImage: {
+              'gradient-discord': 'linear-gradient(to right, #5865F2, #7289DA)'
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body class="bg-white dark:bg-discord-dark transition-colors duration-200">
+    <!-- Toggle modo oscuro -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-2 rounded-lg bg-gray-200 dark:bg-discord-darker">
+      <i class="fi fi-rr-moon dark:hidden"></i>
+      <i class="fi fi-rr-sun hidden dark:block text-white"></i>
+    </button>
+    
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -335,5 +375,27 @@
 
     <script src="./index.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  </body>
+</html>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inicializar AOS
+      AOS.init();
+      
+      // Toggle modo oscuro
+      const themeToggle = document.getElementById('theme-toggle');
+      themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+      
+      // Typed.js para el texto principal
+      new Typed('#typed-text', {
+        strings: ['Ruby on Rails Developer 💎', 'Backend Developer 🚀', 'Open Source Contributor 🌟'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+      });
+    </script>
   </body>
 </html>

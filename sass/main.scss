@@ -1,11 +1,54 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+// Variables de colores Discord
+$discord-primary: #5865F2;
+$discord-secondary: #99AAB5;
+$discord-dark: #36393F;
+$discord-darker: #2F3136;
+$discord-light: #FFFFFF;
 
-@import 'base/base';
+// Mixins para animaciones
+@mixin fadeIn {
+  @apply opacity-0 transition-opacity duration-500;
+  &.aos-animate {
+    @apply opacity-100;
+  }
+}
 
-@import 'abstracts/utilities';
+// Componentes personalizados
+.btn {
+  @apply inline-flex items-center px-6 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1;
+  
+  &--primary {
+    @apply bg-gradient-to-r from-discord-primary to-[#7289DA] text-white;
+  }
+  
+  &--secondary {
+    @apply bg-discord-secondary text-white;
+  }
+}
 
+// Clases de animación
+[data-aos] {
+  @include fadeIn;
+}
+
+// Modo oscuro
+.dark {
+  .header {
+    @apply bg-discord-darker text-white;
+  }
+  
+  .home-hero {
+    @apply bg-discord-dark text-white;
+  }
+  
+  .projects {
+    @apply bg-discord-darker text-white;
+  }
+}
 @import 'pages/home';
 @import 'pages/project-case-study';
 
