@@ -1,27 +1,21 @@
+// 1. Tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// Variables de colores Discord
-$discord-primary: #5865F2;
-$discord-secondary: #99AAB5;
-$discord-dark: #36393F;
-$discord-darker: #2F3136;
-$discord-light: #FFFFFF;
-
-// Importaciones mixins
+// 2. Abstracts (variables, mixins, functions)
+@import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// Importaciones base
+// 3. Base (reset, typography, etc.)
 @import 'base/base';
 
-// Importaciones de componentes
+// 4. Components
 @import 'components/header';
 @import 'components/footer';
-@import 'components/skills';
-@import 'components/mouse-scroll';
+// ...
 
-// Importaciones de páginas
+// 5. Pages
 @import 'pages/home';
 @import 'pages/project-case-study';
 
