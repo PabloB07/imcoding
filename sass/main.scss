@@ -9,6 +9,9 @@ $discord-dark: #36393F;
 $discord-darker: #2F3136;
 $discord-light: #FFFFFF;
 
+// Importaciones mixins
+@import 'abstracts/mixins';
+
 // Importaciones base
 @import 'base/base';
 
@@ -21,11 +24,6 @@ $discord-light: #FFFFFF;
 // Importaciones de páginas
 @import 'pages/home';
 @import 'pages/project-case-study';
-
-// Estilos Tailwind
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 // Componentes personalizados con Tailwind
 @layer components {
