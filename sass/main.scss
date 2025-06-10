@@ -9,30 +9,37 @@ $discord-dark: #36393F;
 $discord-darker: #2F3136;
 $discord-light: #FFFFFF;
 
-// Mixins para animaciones
-@mixin fadeIn {
-  @apply opacity-0 transition-opacity duration-500;
-  &.aos-animate {
-    @apply opacity-100;
-  }
-}
+// Importaciones base
+@import 'base/base';
 
-// Componentes personalizados
-.btn {
-  @apply inline-flex items-center px-6 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1;
-  
-  &--primary {
-    @apply bg-gradient-to-r from-discord-primary to-[#7289DA] text-white;
-  }
-  
-  &--secondary {
-    @apply bg-discord-secondary text-white;
-  }
-}
+// Importaciones de componentes
+@import 'components/header';
+@import 'components/footer';
+@import 'components/skills';
+@import 'components/mouse-scroll';
 
-// Clases de animación
-[data-aos] {
-  @include fadeIn;
+// Importaciones de páginas
+@import 'pages/home';
+@import 'pages/project-case-study';
+
+// Estilos Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Componentes personalizados con Tailwind
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-6 py-3 rounded-lg transition-all duration-300 transform hover:-translate-y-1;
+    
+    &--primary {
+      @apply bg-gradient-to-r from-discord-primary to-[#7289DA] text-white;
+    }
+    
+    &--secondary {
+      @apply bg-discord-secondary text-white;
+    }
+  }
 }
 
 // Modo oscuro
@@ -49,13 +56,6 @@ $discord-light: #FFFFFF;
     @apply bg-discord-darker text-white;
   }
 }
-@import 'pages/home';
-@import 'pages/project-case-study';
-
-@import 'components/header';
-@import 'components/footer';
-@import 'components/skills';
-@import 'components/mouse-scroll';
 
 
 

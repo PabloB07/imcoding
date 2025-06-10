@@ -4,13 +4,12 @@
   "description": "Portfolio personal con Tailwind CSS y SASS",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel watch:sass watch:tailwind",
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "watch:tailwind": "tailwindcss -i css/style.css -o css/style.tailwind.css --watch",
-    "build:sass": "node-sass sass/main.scss css/style.css",
-    "build:tailwind": "tailwindcss -i css/style.css -o css/style.tailwind.css --minify",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.tailwind.css -o css/style.final.css",
-    "build": "npm-run-all build:sass build:tailwind prefix:css"
+    "dev": "npm-run-all --parallel watch:*",
+    "watch:sass": "sass sass/main.scss:css/style.css --watch",
+    "watch:tailwind": "tailwindcss -i css/style.css -o css/style.final.css --watch",
+    "build:sass": "sass sass/main.scss:css/style.css --style compressed",
+    "build:tailwind": "tailwindcss -i css/style.css -o css/style.final.css --minify",
+    "build": "npm-run-all build:sass build:tailwind"
   },
   "author": "Pablo Blanco",
   "license": "GPL-3.0",
